@@ -33,19 +33,19 @@ class TeamsController {
 
 	constructor($http, ) {
 		this.name = "";
+
     this._$http = $http;
-		this.character = [];
+		this.characters = [];
 	}
 
   addCharacter() {
 		this._$http
 			.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.name}&apikey=0fd87f40d6dd1419e4153fe1a1c9cf04`)
 			.then((response) => {
-				this.character.push(response.data);
+				let character = new Character(response.data.data.results[0].name, response.data.data.results[0].description, `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`)
+				this.characters.push(character);
+				console.log(this.characters);
 				this.name = "";
-				this.description = response.data.data.results[0].description;
-				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
-
 			});
   }
 

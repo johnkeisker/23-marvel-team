@@ -1,31 +1,32 @@
-body {
-  font-face: Helvetica;
-  line-height: 1.4;
+h2 {
+  font-size: 30px;
 }
 
-.character {
-  vertical-align: top;
+.image {
+  height: 200px;
+  float: left;
+  padding-right: 10px;
+}
 
-  &--image {
-    width: 125px;
-    border: 1px solid #000;
-  }
+.character-name {
 
-  td:first-child {
-    padding: 0 1rem 0 0;
-  }
+  font-size: 40px;
+  font-weight: bold;
+  list-style: none;
+  margin-right: 20px;
 
-  h1 {
-    margin: 0;
-  }
+}
+.description {
+  font-weight: normal;
+  text-align: center;
+  width: 300px;
+}
 
-  p {
-    text-align: justify;
-  }
 
-  &--delete {
-    color: crimson;
-    font-size: 1.8rem;
-  }
-
+p {
+  float: right;
+}
+i {
+  float: right;
+  color: red;
 }
