@@ -31,7 +31,7 @@ import Character from './Character';
 
 class TeamsController {
 
-	constructor($http) {
+	constructor($http, ) {
 		this.name = "";
     this._$http = $http;
 		this.character = [];
