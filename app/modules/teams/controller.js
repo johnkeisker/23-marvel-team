@@ -53,7 +53,7 @@ class TeamsController {
 		let confirmed = confirm(`Are you sure you want to remove ${character.name}?`);
 
 		if (confirmed) {
-			this.name.splice(this.name.indexOf(name), 1);
+			this.characters.splice(this.characters.indexOf(character), 1);
 		}
   }
 
