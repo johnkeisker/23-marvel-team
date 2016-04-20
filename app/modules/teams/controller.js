@@ -40,7 +40,7 @@ class TeamsController {
 
   addCharacter() {
 		this._$http
-			.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.name}&apikey=0fd87f40d6dd1419e4153fe1a1c9cf04`)
+			.get(`http://localhost:8000/v1/public/characters?name=${this.name}`)
 			.then((response) => {
 				let character = new Character(response.data.data.results[0].name, response.data.data.results[0].description, `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`)
 				this.characters.push(character);
